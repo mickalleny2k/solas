@@ -58,7 +58,7 @@ class ProjectDAO:
         return returnvalue
 
     def convertToDictionary(self, resultLine):
-        attkeys=['id', 'name','party','constituency', 'years']
+        attkeys=['id','name','party','constituency','years']
         project = {}
         currentkey = 0
         for attrib in resultLine:

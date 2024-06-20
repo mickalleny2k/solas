@@ -42,6 +42,7 @@ def create():
         abort(400)
     # other checking 
     project = {
+        "id": request.json['id'],
         "name": request.json['name'],
         "party": request.json['party'],
         "constituency": request.json['constituency'],
