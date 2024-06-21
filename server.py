@@ -18,7 +18,7 @@ app = Flask(__name__, static_url_path='', static_folder='.')
 
 @app.route('/')
 def index():
-        return "Hello World ! Solas Tool under construction "
+        return "Hello World ! Solas Tool under construction. Coming soon and it's going to be big. No joke ! "
 
 # find by id
 # curl http://127.0.0.1:5000/project/1
