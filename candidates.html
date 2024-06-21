@@ -13,6 +13,7 @@
             <th><a href="https://www.sinnfein.ie" title="Party">Party</a></th>
             <th><a href="https://www.corkcity.ie/en/council-services/councillors-and-democracy/local-elections-2024/cork-city-north-west/" title="Constituency">Constituency</a></th>
             <th>Years in Office</th>
+            <th> OPTIONS </th>
             <th> DELETE </th>
         </tr>
 
@@ -38,7 +39,7 @@
         //document.getElementById('updateLabel').style.display="none"
 
         document.getElementById('doCreateButton').style.display="block"
-        //document.getElementById('doUpdateButton').style.display="none"
+        document.getElementById('doOptionsButton').style.display="none"
     
         }
         function showViewAll(){
@@ -63,6 +64,7 @@
             
             var project = getProjectFromRow(rowElement)
             populateFormWithProject(project)
+
         }
         function doCreate(){
             var form = document.getElementById('createUpdateForm')
@@ -109,10 +111,10 @@ function addProjectToTable(project){
     cell4.innerHTML = project.constituency
     var cell5 = rowElement.insertCell(4);
     cell5.innerHTML = project.years
-    //var cell6 = rowElement.insertCell(5);
-    //cell6.innerHTML = '<button onclick="showUpdate(this)">Update</button>'
     var cell6 = rowElement.insertCell(5);
-    cell6.innerHTML = '<button onclick=doDelete(this)>delete</button>'
+    cell6.innerHTML = '<a href="./Options.html"><button type="button">Options</button></a>'
+    var cell7 = rowElement.insertCell(6);
+    cell7.innerHTML = '<button onclick=doDelete(this)>delete</button>'
 
 }
     
